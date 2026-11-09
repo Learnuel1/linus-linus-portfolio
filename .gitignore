@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE & Tooling
+.idea/
+.vscode/
+.qodo/
