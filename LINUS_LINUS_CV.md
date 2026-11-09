@@ -10,21 +10,22 @@
 
 ## EXECUTIVE SUMMARY
 
-Accomplished Senior Full-Stack & Systems Software Architect with proven expertise delivering enterprise Windows desktop financial accounting suites, real-time on-demand logistics marketplaces, government loan management engines, and secure cloud collaboration platforms. Proficient across C#/.NET Framework, Node.js, Express, React 18, Microsoft SQL Server (90+ T-SQL Stored Procedures), MongoDB, Socket.io, and double-entry financial ledgers. Deep background in asynchronous multi-threading, concurrency prevention locks, regulatory KYC (BVN, NIN, CAC), hardware-bound anti-tamper licensing, and defensive API security.
+Accomplished Senior Full-Stack & Systems Software Architect with over 7 production-grade enterprise systems spanning healthcare hospital management (HIMS), institutional bursary accounting, wholesale ERP supply chains, real-time on-demand logistics marketplaces, government loan processing engines, and encrypted cloud storage platforms. Expert in C#/.NET Framework, Node.js, Express, React 18, Microsoft SQL Server (90+ T-SQL Stored Procedures, Views, Triggers), MongoDB, Socket.io, Python automation (PyODBC/Google Drive), and double-entry financial ledgers. Deep background in asynchronous multi-threading, concurrency prevention locks, regulatory KYC (BVN, NIN, CAC), hardware-bound anti-tamper licensing (WMI SHA-256), and defensive API security.
 
 ---
 
 ## CORE TECHNICAL COMPETENCIES
 
-- **Programming Languages:** C# (5.0/6.0), JavaScript (ES6+, ESNext, Node.js v18/v20), TypeScript, T-SQL, HTML5, CSS3, Handlebars, EJS
-- **Desktop & Systems Engineering (.NET):** .NET Framework 4.5, Windows Forms, ADO.NET (`SqlCommand`, `SqlDataAdapter`, `SqlHelper`), WMI Hardware Fingerprinting (SHA-256), Multi-Threaded Asynchronous Engines (`Task.Run()`), Windows Isolated Storage, Factory Pattern, LiveCharts (WinForms/WPF), Bunifu UI, MetroFramework
-- **Reporting & Barcode Engines:** SAP Crystal Reports 13.x, Zen Barcode Rendering Framework (Code128 1D & QR Code 2D), `iTextSharp` PDF generation, `ExcelDataReader` (binary `.xlsx`/`.xls` parsing)
+- **Programming Languages:** C# (5.0/6.0), JavaScript (ES6+, ESNext, Node.js v18/v20), TypeScript, Python, T-SQL, HTML5, CSS3, Handlebars, EJS
+- **Desktop & Systems Engineering (.NET):** .NET Framework 4.5 / 4.5.2, Windows Forms, ADO.NET (`SqlCommand`, `SqlDataAdapter`, `SqlHelper`), WMI Hardware Fingerprinting (SHA-256), Multi-Threaded Asynchronous Engines (`Task.Run()`), Windows Isolated Storage, Factory Pattern, LiveCharts (WinForms/WPF), Bunifu UI, MetroFramework
+- **Healthcare & Enterprise ERP Systems:** Hospital Information & Management Systems (HIMS), In-Patient Admission & Ward/Bed tracking, 3-Tier Pharmacy Stock Hierarchy (Main Store -> Dispensary -> Pharmacy Counter), Clinical Laboratory Pathology, Haematology & Microbiology reports, Drug Expiry Background Timer Engine, Wholesale ERP Supply Chain & Cheque Registers
+- **Reporting & Barcode Engines:** SAP Crystal Reports 13.x, Zen Barcode Rendering Framework (Code128 1D & QR Code 2D), `iTextSharp` PDF generation, `ExcelDataReader` (binary `.xlsx`/`.xls` parsing), Thermal POS receipt printing
 - **Backend & Distributed Systems:** Node.js, Express.js 4.x, Socket.io (WebSocket real-time hub), Node.js `EventEmitter`, Dual-Route Gateway Architecture (`/api/v1` vs `/api/v1/m`), Layered Service Architecture, RESTful APIs, Swagger / OpenAPI 2.0, Zod Runtime Validation
 - **Databases & Persistence:** Microsoft SQL Server (2012–2022 / Express), 90+ Stored Procedures, Triggers, Views, ACID Transactions, File-level database backup/restore (`.mdf`/`.ldf`), MongoDB & Mongoose 6.x (Aggregation pipelines, soft deletes, indexing)
-- **FinTech & Financial Ledgers:** Double-entry wallet ledgers (`Wallet` & `WalletHistory` / `Transactions`), Platform escrow settlement, Commission calculation engines, Paystack API & Transfer API, Flutterwave SDK, Bloc API, Bank Verification Number (BVN) resolution, NIP commercial bank lookup, Bank teller slip reconciliation
+- **Cloud Sync & Infrastructure:** PythonDrive (PyODBC + Google Drive API automation), AWS Secrets Manager, AWS S3, Cloudinary SDK, Multer streaming, Render Cloud Platform, Git/GitHub
+- **FinTech & Financial Ledgers:** Double-entry wallet ledgers (`Wallet` & `WalletHistory` / `Transactions`), Platform escrow settlement, Commission calculation engines, Paystack API & Transfer API, Flutterwave SDK, Bloc API, BVN resolution, NIP commercial bank lookup, Bank teller slip reconciliation
 - **Geospatial & Logistics:** Google Maps Platform (Geocoding & Distance Matrix API), Haversine geo-radius courier dispatching (`getOrdersWithinRadius`), Courier GPS & Geofencing, Cryptographic QR Code Handover
 - **Security & Cryptography:** WMI hardware fingerprinting (SHA-256 machine ID), JWT symmetric claims obfuscation (Base64/Hex), Two-Factor Authentication (2FA), `bcryptjs`, AES/TripleDES connection string encryption, RBAC multi-tier guards
-- **Cloud Infrastructure & Secrets:** AWS Secrets Manager, AWS S3, Cloudinary SDK, Multer streaming, Render Cloud Platform, Git/GitHub
 - **Frontend Frameworks & State:** React 18, Vite, Next.js (App Router), Redux Toolkit (`@reduxjs/toolkit`), RTK Query (auto 401 token refresh), `redux-persist`, MobX, React Router DOM v6, Tailwind CSS, `@cyntler/react-doc-viewer`, `react-file-viewer`
 
 ---
@@ -33,13 +34,29 @@ Accomplished Senior Full-Stack & Systems Software Architect with proven expertis
 
 ### Lead Desktop & Systems Architect — Cash Desk Application
 **Enterprise .NET / C# Desktop Bursary, POS & Campus Commerce Accounting Suite**
-- Architected an enterprise-grade Windows desktop financial management and accounting suite tailored for primary and secondary educational institutions.
-- **Asynchronous Multi-Threaded Debt Engine (`GroundWorker`):** Designed non-blocking background workers using `Task.Run()` to execute concurrent term debt audits (`FirstTermDebtAsync`, `SecondTermDebtAsync`, `ThirdTermDebtAsync`), zero-payment scans, and duplicate debtor deduplication on application boot without freezing the UI.
+- Architected an enterprise Windows desktop financial management suite for primary and secondary educational institutions.
+- **Asynchronous Multi-Threaded Debt Engine (`GroundWorker`):** Designed non-blocking background workers using `Task.Run()` to execute concurrent term debt audits (`FirstTermDebtAsync`, `SecondTermDebtAsync`, `ThirdTermDebtAsync`), zero-payment scans, and duplicate debtor deduplication on application boot without UI freezing.
 - **Student Digital Wallet ("Pocket Money"):** Engineered a cashless payment ecosystem tied 1:1 to student matriculation numbers, supporting individual deposits, bulk parent funding by class/arm (`BulkFund`), and automated Balance Brought Forward (`BF`) session rollover.
 - **Point of Sale (POS) & Store Inventory Subsystem:** Built high-speed barcode checkout supporting Code128 1D and QR 2D scanning (`Zen.Barcode`), multi-tender settlements (Pocket Money, Cash, Bank, Issued, Credit), and closing stock term reconciliation.
 - **Hardware-Bound Anti-Tamper Licensing:** Created a machine licensing engine querying WMI (`Win32_Processor.ProcessorId` and `Win32_BIOS.SerialNumber`) to compute a machine SHA-256 hash, verified against activation keys stored across two-factor storage (SQL database + Windows Isolated Storage) with a 120-record demo trial safeguard.
 - **Database Architecture:** Developed 90+ compiled SQL Server stored procedures enforcing ACID transactional integrity and direct file-level `.mdf`/`.ldf` backup/restore scripts.
-- **Reporting Engine:** Integrated SAP Crystal Reports (15+ `.rpt` templates) and thermal POS receipt printing (58mm/80mm).
+
+### Lead Healthcare Systems Architect — ChucksMedicareApp
+**Enterprise Hospital Information & Management System (HIMS) & Pharmacy POS**
+- Architected an enterprise-grade clinical management and healthcare dispensary suite coordinating medical staff, patients, laboratory investigations, and hospital accounting.
+- **In-Patient Ward & Bed Management:** Engineered real-time patient admission tracking, room/bed assignment (`RoomsAndBedFrm`), diagnostic charting, treatment prescription logs, and discharge billing.
+- **3-Tier Pharmaceutical Inventory Engine:** Structured drug stock movement from Main Warehouse Store -> Dispensary -> Pharmacy Retail Counter with batch tracking, cost/selling price margins, and supplier purchase orders.
+- **Diagnostic Laboratory Suite:** Built dedicated clinical pathology, haematology (full blood count, genotype), and microbiology (culture, sensitivity, microscopy) reporting modules generating certified diagnostic printouts.
+- **Active Drug Expiry Alert Engine:** Created background timer monitors scanning pharmaceutical inventories for near-expiry drugs ($<30$ days) and out-of-stock items, triggering real-time toast alerts.
+- **Medical Role-Based Access Control:** Implemented a 7-tier role security matrix (Admin, Sales Manager, Accountant, Doctor/Nurse, Lab Scientist, Sales Rep, Receptionist) and hardware UUID licensing.
+
+### Lead ERP & Systems Architect — MM Traders Inventory Management System
+**Enterprise Desktop ERP, POS Billing, Supply Chain & Automated Cloud Sync**
+- Designed an enterprise Windows desktop ERP solution handling multi-brand inventory, POS billing, customer CRM, and automated offsite backups.
+- **POS Billing & Multi-Tender Checkout:** Built high-speed billing terminals supporting Cash, Credit sales with customer debt ledgers, and Cheque payment registers with clearance date tracking.
+- **Automated Cloud Backup (PythonDrive):** Built Python automation scripts integrating PyODBC and Google Drive API to execute automated offsite backups of SQL Server databases directly to Google Drive.
+- **Customer CRM & Route Clustering:** Grouped commercial buyers into geographic city clusters (`CityGroup`) to coordinate delivery logistics and territory sales.
+- **Granular Feature Flag RBAC:** Enforced pipe-separated permission strings (`ADPRDCT|MKSL|RTRN|...`) to dynamically toggle UI controls and operational screen access.
 
 ### Lead Distributed Systems & Backend Architect — Grubbex Backend API
 **Multi-Sided On-Demand Food & Grocery Logistics Marketplace**
@@ -79,7 +96,7 @@ Accomplished Senior Full-Stack & Systems Software Architect with proven expertis
 ## EDUCATION & PROFESSIONAL DEVELOPMENT
 
 - **Bachelor of Science (B.Sc.) in Computer Science / Software Engineering**
-- **Continuous Technical Mastery:** Real-Time Distributed Systems, Financial Ledger Architecture, Cloud Security & Cryptography
+- **Continuous Technical Mastery:** Real-Time Distributed Systems, Healthcare HIMS Architecture, Financial Ledger Engineering, Cloud Security & Cryptography
 
 ---
 
@@ -87,4 +104,4 @@ Accomplished Senior Full-Stack & Systems Software Architect with proven expertis
 
 - **GitHub Profile:** [https://www.github.com/Learnuel1](https://www.github.com/Learnuel1)
 - **Portfolio Repository:** [https://github.com/Learnuel1/linus-linus-portfolio](https://github.com/Learnuel1/linus-linus-portfolio)
-- **Flagship Codebases:** Cash Desk Application, Grubbex Logistics API, BYSHELB LMS Backend v2, SecureSync Cloud Storage
+- **Flagship Codebases:** Cash Desk Application, ChucksMedicareApp HIMS, MM Traders ERP, Grubbex Logistics API, BYSHELB LMS Backend v2, SecureSync Cloud Storage

@@ -1,17 +1,19 @@
 // Linus Linus Portfolio — Core Interactive Application Logic
-// Verified Data Models from CASH DESK, GRUBBEX, BYHELB LMS, and SECURESYNC
+// Verified Data Models from CASH DESK, CHUCKSMEDICARE, MM TRADERS, GRUBBEX, BYHELB LMS, and SECURESYNC
 
 // ==================== 1. VERIFIED SKILLS INVENTORY ====================
 const skillsData = [
-  // Desktop & Systems
+  // Desktop & Systems (.NET)
   { name: 'C# (5.0 / 6.0)', category: 'desktop', level: 'Expert', icon: 'file-code-2', desc: 'Object-oriented systems programming, async Task patterns' },
-  { name: '.NET Framework 4.5', category: 'desktop', level: 'Architect', icon: 'layers', desc: 'Windows Forms, ADO.NET, Service & Factory layers' },
+  { name: '.NET Framework 4.5/4.5.2', category: 'desktop', level: 'Architect', icon: 'layers', desc: 'Windows Forms, ADO.NET, Service & Factory layers' },
   { name: 'ADO.NET & SqlHelper', category: 'desktop', level: 'Advanced', icon: 'database', desc: 'Direct parameterization, SqlDataAdapter, ACID transactions' },
   { name: 'Multi-Threading (Async)', category: 'desktop', level: 'Architect', icon: 'cpu', desc: 'GroundWorker non-blocking reconciliation, Task.Run()' },
   { name: 'WMI Hardware Security', category: 'desktop', level: 'Advanced', icon: 'shield-alert', desc: 'Win32_Processor & BIOS hashing to SHA-256 for machine licenses' },
   { name: 'SAP Crystal Reports 13', category: 'desktop', level: 'Advanced', icon: 'file-text', desc: '15+ enterprise audit reports, thermal POS slip generation' },
   { name: 'Zen Barcode Engine', category: 'desktop', level: 'Advanced', icon: 'scan', desc: 'Code128 1D & QR Code 2D generation & parsing' },
   { name: 'ExcelDataReader', category: 'desktop', level: 'Advanced', icon: 'table', desc: 'High-throughput binary .xlsx/.xls parsing & roster cleaning' },
+  { name: 'Healthcare HIMS & Wards', category: 'desktop', level: 'Architect', icon: 'activity', desc: 'In-patient admissions, room/bed allocations & patient charting' },
+  { name: '3-Tier Pharmacy Hierarchy', category: 'desktop', level: 'Architect', icon: 'package', desc: 'Store to dispensary to pharmacy shelf inventory movement' },
 
   // Backend & Real-Time
   { name: 'Node.js (v18 / v20)', category: 'backend', level: 'Expert', icon: 'server', desc: 'High-throughput microservices, non-blocking I/O runtime' },
@@ -38,7 +40,7 @@ const skillsData = [
   { name: 'Next.js App Router', category: 'frontend', level: 'Advanced', icon: 'globe', desc: 'Server/client components, SEO metadata, API routes' },
   { name: 'Redux Toolkit & RTK Query', category: 'frontend', level: 'Expert', icon: 'repeat', desc: 'Normalized state, automated 401 token refresh & rotation' },
   { name: 'MobX State Management', category: 'frontend', level: 'Advanced', icon: 'zap', desc: 'Observable stores, wizard progress providers, draft resume' },
-  { name: 'React Router DOM v6', category: 'frontend', level: 'Expert', icon: 'compass', desc: 'createBrowserRouter, protected route guards, layout nested paths' },
+  { name: 'PythonDrive (PyODBC)', category: 'frontend', level: 'Advanced', icon: 'cloud-rain', desc: 'Python automation syncing SQL Server backups to Google Drive' },
   { name: 'Tailwind CSS & PostCSS', category: 'frontend', level: 'Expert', icon: 'palette', desc: 'Utility-first modern design, dark/light theme switching' },
   { name: '@cyntler Doc Viewer', category: 'frontend', level: 'Advanced', icon: 'eye', desc: 'In-app native rendering for PDF, Word, Excel, PowerPoint' },
   { name: 'Google Maps Platform', category: 'frontend', level: 'Advanced', icon: 'map-pin', desc: 'Geocoding, Distance Matrix API, Haversine geo-fencing' },
@@ -46,12 +48,12 @@ const skillsData = [
   { name: 'Two-Factor Auth (2FA)', category: 'frontend', level: 'Advanced', icon: 'key', desc: 'Timed OTP challenges, challenge verification, fallback recovery' }
 ];
 
-// ==================== 2. FIVE FLAGSHIP SYSTEMS DATA ====================
+// ==================== 2. SEVEN FLAGSHIP SYSTEMS DATA ====================
 const projectsData = [
   {
     id: 'cashdesk',
     title: 'Cash Desk (CashDeskApp)',
-    badge: 'Desktop & Institutional FinTech',
+    badge: 'Desktop Bursary & FinTech',
     badgeColor: 'border-brand-500/40 text-brand-300 bg-brand-950/30',
     subtitle: 'Enterprise Windows Desktop Financial Suite, Bursary, POS & Stored Procedures',
     stack: ['C#', '.NET Framework 4.5', 'SQL Server 2012+', 'ADO.NET', 'Crystal Reports 13', 'WMI SHA-256', 'LiveCharts', 'Zen Barcode'],
@@ -87,9 +89,81 @@ const projectsData = [
     `
   },
   {
+    id: 'chucksmedicare',
+    title: 'ChucksMedicareApp',
+    badge: 'Healthcare HIMS & Clinical Diagnostics',
+    badgeColor: 'border-rose-500/40 text-rose-300 bg-rose-950/30',
+    subtitle: 'Hospital Information & Management System, 3-Tier Pharmacy & Diagnostic Labs',
+    stack: ['C#', '.NET Framework 4.5', 'Microsoft SQL Server', 'ADO.NET (SqlHelper)', 'Crystal Reports 13.0', 'IsolatedStorage', 'Thermal POS'],
+    metrics: [
+      { label: 'Clinical Roles', val: '7 RBAC Tiers' },
+      { label: 'Pharmacy Tiers', val: '3 Stages' },
+      { label: 'Lab Disciplines', val: 'Pathology & Haematology' },
+      { label: 'Expiry Alerts', val: 'Real-Time Toast' }
+    ],
+    overview: 'An enterprise-grade Hospital Information and Management System (HIMS) and Pharmacy POS desktop application. Coordinates healthcare clinical workflows, in-patient ward/bed allocations, 3-tier pharmaceutical inventory, point-of-sale billing, clinical laboratory investigations, hospital accounting, and hardware licensing.',
+    architecture: `
+      <div class="space-y-4 text-sm text-slate-300">
+        <h4 class="font-bold text-white text-base flex items-center gap-2">
+          <i data-lucide="activity" class="w-4 h-4 text-rose-400"></i>
+          In-Patient Admission & Ward Management Lifecycle:
+        </h4>
+        <p>Seamless orchestration between Receptionist, Doctor, Lab Scientist, and Accountant: Patient registration -> Bed/Room allocation -> Clinical diagnosis & prescription -> Pathology/Haematology lab testing -> Itemized settlement & bed release.</p>
+
+        <h4 class="font-bold text-white text-base flex items-center gap-2 pt-2">
+          <i data-lucide="package" class="w-4 h-4 text-amber-400"></i>
+          Three-Tier Pharmaceutical Inventory Movement:
+        </h4>
+        <p>Ensures zero leakage across medical supply chains: <strong>Main Store</strong> (bulk warehouse receiving from suppliers) -> <strong>Dispensary</strong> (intermediate stock holding) -> <strong>Pharmacy Counter</strong> (dispensing point for out-patients with POS barcode scanning).</p>
+
+        <h4 class="font-bold text-white text-base flex items-center gap-2 pt-2">
+          <i data-lucide="bell-ring" class="w-4 h-4 text-cyan-400"></i>
+          Active Drug Expiry Timer Engine:
+        </h4>
+        <p>Dynamic background monitors actively evaluate drug shelf-life (< 30 days) and inventory stockouts, popping automated toast notifications in <code>NotificationFrm.cs</code> to prevent dispensing expired medications.</p>
+      </div>
+    `
+  },
+  {
+    id: 'mmtraders',
+    title: 'MM Traders Inventory ERP',
+    badge: 'Enterprise ERP & Cloud Backup',
+    badgeColor: 'border-indigo-500/40 text-indigo-300 bg-indigo-950/30',
+    subtitle: 'Wholesale Inventory ERP, Point of Sale, Cheque Registers & Google Drive Sync',
+    stack: ['C#', '.NET Framework 4.5.2', 'Microsoft SQL Server', 'Python (PythonDrive)', 'PyODBC', 'Google Drive API', 'Crystal Reports 13.x'],
+    metrics: [
+      { label: 'Cloud Sync', val: 'Google Drive API' },
+      { label: 'Payment Types', val: 'Cash, Credit, Cheques' },
+      { label: 'Permission Matrix', val: 'Pipe-Separated Flags' },
+      { label: 'CRM Logistics', val: 'City Cluster Routing' }
+    ],
+    overview: 'Enterprise Windows desktop ERP and inventory management solution. Coordinates point-of-sale billing, multi-brand wholesale inventory tracking, customer/supplier ledgers, cheque clearance registers, Crystal Reports analytics, and automated cloud backups to Google Drive.',
+    architecture: `
+      <div class="space-y-4 text-sm text-slate-300">
+        <h4 class="font-bold text-white text-base flex items-center gap-2">
+          <i data-lucide="cloud-rain" class="w-4 h-4 text-indigo-400"></i>
+          Automated Cloud Sync via PythonDrive:
+        </h4>
+        <p>Engineered Python automation scripts (<code>PythonDrive</code>) integrating PyODBC and Google Drive API to execute scheduled, encrypted offsite backups of SQL Server databases directly to cloud storage without human intervention.</p>
+
+        <h4 class="font-bold text-white text-base flex items-center gap-2 pt-2">
+          <i data-lucide="credit-card" class="w-4 h-4 text-emerald-400"></i>
+          Multi-Tender POS & Cheque Payment Register:
+        </h4>
+        <p>Supports cash counter billing, credit receivables, and commercial bank cheque tracking (<code>dbo.chequesale</code>) recording bank names, cheque serial numbers, due dates, and clearance states.</p>
+
+        <h4 class="font-bold text-white text-base flex items-center gap-2 pt-2">
+          <i data-lucide="map" class="w-4 h-4 text-amber-400"></i>
+          Geographic Client Routing (CityGroups):
+        </h4>
+        <p>Clusters wholesale distributors and retail customers by territory clusters (<code>CityGroup</code> & <code>GroupedCities</code>) to optimize delivery dispatching and regional sales tracking.</p>
+      </div>
+    `
+  },
+  {
     id: 'grubbex',
     title: 'Grubbex Backend API',
-    badge: 'Real-Time Logistics & On-Demand Marketplace',
+    badge: 'Real-Time Logistics Marketplace',
     badgeColor: 'border-emerald-500/40 text-emerald-300 bg-emerald-950/30',
     subtitle: 'Multi-Sided Logistics Marketplace, Socket.io Geo-Dispatching & Escrow Ledger',
     stack: ['Node.js v20', 'Express.js', 'Socket.io', 'MongoDB (Mongoose)', 'Zod', 'Google Maps API', 'Paystack Transfer', 'AWS Secrets'],
@@ -125,7 +199,7 @@ const projectsData = [
   {
     id: 'byhelb-be',
     title: 'BYHELB LMS Backend v2',
-    badge: 'Government FinTech & Distributed Governance',
+    badge: 'Government FinTech & Governance',
     badgeColor: 'border-cyan-500/40 text-cyan-300 bg-cyan-950/30',
     subtitle: 'Distributed Loan Processing Engine, 8-Tier RBAC & Concurrency View Locks',
     stack: ['Node.js v20', 'Express.js', 'MongoDB', 'Mongoose 6', 'Winston', 'Paystack', 'Flutterwave', 'SendGrid', 'EJS'],
@@ -161,7 +235,7 @@ const projectsData = [
   {
     id: 'byhelb-fe',
     title: 'BYSHELB Student Loan Portal Frontend',
-    badge: 'Citizen-Facing Web App & Multi-Step Wizard',
+    badge: 'Citizen-Facing Web App & Wizard',
     badgeColor: 'border-blue-500/40 text-blue-300 bg-blue-950/30',
     subtitle: '7-Stage Loan Application Pipeline & 3-Tier Prerequisite Onboarding Gatekeeper',
     stack: ['React 18', 'Vite', 'MobX State', 'React Router DOM', 'Styled Components', 'Flutterwave Inline SDK'],
@@ -275,7 +349,7 @@ document.getElementById('skillTabs')?.addEventListener('click', (e) => {
   renderSkills(btn.dataset.category);
 });
 
-// Render 5 Projects
+// Render 7 Projects
 function renderProjects() {
   const container = document.getElementById('projectsContainer');
   if (!container) return;
@@ -387,6 +461,48 @@ function initSimulator(simType) {
     `;
 
     document.getElementById('runGroundworkerBtn')?.addEventListener('click', runGroundworkerSimulation);
+  } else if (simType === 'chucksmedicare-flow') {
+    display.innerHTML = `
+      <div class="space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
+          <div>
+            <h4 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="activity" class="w-5 h-5 text-rose-400"></i>
+              ChucksMedicareApp: In-Patient Clinical Workflow & 3-Tier Pharmacy
+            </h4>
+            <p class="text-xs text-slate-400 font-mono">Step through clinical admission, bed allocation, lab diagnostics and dispensary checkout</p>
+          </div>
+          <button id="advanceClinicBtn" class="px-4 py-2 rounded-xl text-xs font-semibold bg-rose-500 hover:bg-rose-400 text-slate-950 transition-all flex items-center gap-1.5">
+            <i data-lucide="heart-pulse" class="w-4 h-4"></i> Step Clinical Event
+          </button>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center" id="clinicSteps">
+          <div class="c-step p-3 rounded-xl border border-slate-800 bg-slate-950" data-cstep="0">
+            <span class="text-xs font-mono text-slate-400 block">Step 1</span>
+            <span class="text-sm font-bold text-white">Admit & Bed Assign</span>
+          </div>
+          <div class="c-step p-3 rounded-xl border border-slate-800 bg-slate-950" data-cstep="1">
+            <span class="text-xs font-mono text-slate-400 block">Step 2</span>
+            <span class="text-sm font-bold text-white">Lab Investigation</span>
+          </div>
+          <div class="c-step p-3 rounded-xl border border-slate-800 bg-slate-950" data-cstep="2">
+            <span class="text-xs font-mono text-slate-400 block">Step 3</span>
+            <span class="text-sm font-bold text-white">3-Tier Pharmacy Dispense</span>
+          </div>
+          <div class="c-step p-3 rounded-xl border border-slate-800 bg-slate-950" data-cstep="3">
+            <span class="text-xs font-mono text-slate-400 block">Step 4</span>
+            <span class="text-sm font-bold text-white">Itemized Settlement</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 font-mono text-xs text-slate-300 h-28 overflow-y-auto space-y-1" id="clinicLog">
+          <div class="text-slate-500">// Patient arrives at Reception. Click 'Step Clinical Event' to admit.</div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('advanceClinicBtn')?.addEventListener('click', advanceClinicSimulation);
   } else if (simType === 'loan-statemachine') {
     display.innerHTML = `
       <div class="space-y-6">
@@ -531,6 +647,30 @@ function runGroundworkerSimulation() {
     log.innerHTML += `<div class="text-brand-300 font-bold">> [GroundWorker Success]: Total 450 accounts reconciled in 1.2s. Main UI remained at 60 FPS.</div>`;
     document.querySelector('#thread2 .status').textContent = 'Done (92)';
   }, 1200);
+}
+
+// ChucksMedicare Simulation Logic
+let currentClinicStep = 0;
+function advanceClinicSimulation() {
+  const log = document.getElementById('clinicLog');
+  const steps = document.querySelectorAll('.c-step');
+  if (!log || steps.length === 0) return;
+
+  steps.forEach(s => s.classList.remove('border-rose-400', 'bg-rose-950/40', 'text-rose-300'));
+
+  currentClinicStep = (currentClinicStep + 1) % steps.length;
+  const activeStep = steps[currentClinicStep];
+  activeStep.classList.add('border-rose-400', 'bg-rose-950/40', 'text-rose-300');
+
+  const messages = [
+    `<div class="text-slate-300">> [Admission]: Patient registered. Assigned to Female Surgical Ward -> Bed #04 (Occupied set to True in SQL).</div>`,
+    `<div class="text-cyan-400">> [Laboratory]: Doctor orders Full Blood Count & Fasting Blood Sugar. Lab scientist enters pathology findings. Certified printout generated.</div>`,
+    `<div class="text-amber-300">> [3-Tier Pharmacy]: Antibiotic stock moved from Main Store -> Dispensary -> Pharmacy Counter. Expiry checked (> 180 days valid).</div>`,
+    `<div class="text-emerald-400 font-bold">> [Settlement]: Patient cleared by Accountant in BillPaymentFrm. Bed #04 status reset to 'Available'. Transaction written to DailyActivity.</div>`
+  ];
+
+  log.innerHTML += messages[currentClinicStep];
+  log.scrollTop = log.scrollHeight;
 }
 
 // Loan State Machine Simulation Logic

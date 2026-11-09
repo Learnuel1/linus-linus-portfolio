@@ -15,11 +15,13 @@
 ## 🚀 Overview
 
 This repository hosts the official interactive developer profile portfolio of **Linus Linus**, demonstrating multi-platform systems engineering across:
-- **Enterprise Windows Desktop Suites** (.NET Framework 4.5, C#, Microsoft SQL Server, 90+ Stored Procedures, Multi-Threaded Async Engines, Crystal Reports, WMI Hardware Security).
-- **Real-Time On-Demand Logistics Marketplaces** (Node.js, Express, Socket.io, Google Maps Geocoding & Geo-Radius Proximity Dispatching, Zod, Double-Entry Escrow Ledgers).
-- **Distributed Government FinTech** (Node.js, Express, MongoDB, 8-Tier RBAC State Machine, Internal Batch Memo Routing, Concurrency View Locks, BVN & NIP Bank Resolution).
-- **Citizen-Facing Web Applications** (React 18, Vite, MobX, 7-Stage Progressive Wizard, 3-Tier Onboarding Gatekeepers).
-- **Encrypted Cloud Storage Platforms** (React 18, Redux Toolkit, RTK Query Auto Token Rotation on 401s, 2FA, In-App Multi-Format Document Viewers).
+- **Healthcare & Hospital Management (HIMS):** ChucksMedicareApp coordinating clinical care, in-patient ward/bed allocations, 3-tier pharmacy inventory, pathology/haematology diagnostics, and hardware UUID licensing.
+- **Enterprise Windows Desktop Suites:** .NET Framework 4.5/4.5.2, C#, Microsoft SQL Server, 90+ Stored Procedures, Multi-Threaded Async Engines, Crystal Reports, WMI Hardware Security.
+- **Enterprise ERP & Cloud Backup:** MM Traders POS, wholesale supply chain, cheque registers, and automated Google Drive cloud backup via PythonDrive.
+- **Real-Time On-Demand Logistics Marketplaces:** Node.js, Express, Socket.io, Google Maps Geocoding & Proximity Geo-Dispatching, Zod, Double-Entry Escrow Ledgers.
+- **Distributed Government FinTech:** Node.js, Express, MongoDB, 8-Tier RBAC State Machine, Internal Batch Memo Routing, Concurrency View Locks, BVN & NIP Bank Resolution.
+- **Citizen-Facing Web Applications:** React 18, Vite, MobX, 7-Stage Progressive Wizard, 3-Tier Onboarding Gatekeepers.
+- **Encrypted Cloud Storage Platforms:** React 18, Redux Toolkit, RTK Query Auto Token Rotation on 401s, 2FA, In-App Multi-Format Document Viewers.
 
 ---
 
@@ -27,22 +29,26 @@ This repository hosts the official interactive developer profile portfolio of **
 
 | Domain | Verified Tools & Technologies |
 |---|---|
-| **Programming Languages** | C# (5.0/6.0), JavaScript (ES6+, Node.js v18/v20), TypeScript, T-SQL, HTML5, CSS3, Handlebars, EJS |
-| **Desktop & Systems** | .NET Framework 4.5, Windows Forms, ADO.NET (`SqlCommand`, `SqlDataAdapter`, `SqlHelper`), WMI Hardware Fingerprinting (SHA-256), Multi-Threaded Asynchronous Background Workers (`Task.Run()`), SAP Crystal Reports 13.x, Zen Barcode (Code128 / QR), iTextSharp, ExcelDataReader |
+| **Programming Languages** | C# (5.0/6.0), JavaScript (ES6+, Node.js v18/v20), TypeScript, Python, T-SQL, HTML5, CSS3, Handlebars, EJS |
+| **Desktop & Systems** | .NET Framework 4.5 / 4.5.2, Windows Forms, ADO.NET (`SqlCommand`, `SqlDataAdapter`, `SqlHelper`), WMI Hardware Fingerprinting (SHA-256), Multi-Threaded Asynchronous Background Workers (`Task.Run()`), SAP Crystal Reports 13.x, Zen Barcode (Code128 / QR), iTextSharp, ExcelDataReader |
+| **Healthcare & Domain Engines** | Hospital Information & Management Systems (HIMS), In-Patient Admission & Ward/Bed tracking, 3-Tier Pharmacy Hierarchy (Main Store -> Dispensary -> Pharmacy Counter), Clinical Laboratory Pathology, Haematology & Microbiology reports, Drug Expiry Background Timer Engine |
 | **Backend & Real-Time** | Node.js, Express.js 4.x, Socket.io (WebSocket Real-Time Hub), Dual-Route Gateways (`/api/v1` vs `/api/v1/m`), Node.js `EventEmitter`, Zod Runtime Validation, RESTful APIs, Swagger / OpenAPI 2.0 |
 | **Databases & Ledgers** | Microsoft SQL Server (2012–2022/Express), 90+ Stored Procedures, Views, Triggers, ACID Transactions, MongoDB & Mongoose 6.x, Double-Entry Wallet Ledgers (`Wallet` & `WalletHistory`), Platform Escrow Models |
+| **Cloud Sync & Infrastructure** | PythonDrive (PyODBC + Google Drive API automation), AWS Secrets Manager, AWS S3, Cloudinary, Render Cloud Platform |
 | **FinTech & Security** | Paystack Payment & Transfer API, Flutterwave SDK, Bloc API, BVN Resolution, NIP Commercial Bank Lookup, Two-Factor Authentication (2FA), Symmetric Claims Obfuscation (Base64-Hex), WMI Anti-Tamper Licensing |
-| **Frontend & Cloud** | React 18, Vite, Next.js, Redux Toolkit, RTK Query (Automatic 401 Token Rotation), MobX, React Router DOM v6, Tailwind CSS, `@cyntler/react-doc-viewer`, Google Maps Platform, AWS Secrets Manager, AWS S3, Cloudinary |
+| **Frontend Frameworks** | React 18, Vite, Next.js, Redux Toolkit, RTK Query (Automatic 401 Token Rotation), MobX, React Router DOM v6, Tailwind CSS, `@cyntler/react-doc-viewer`, Google Maps Platform |
 
 ---
 
-## 🏛️ Five Flagship Production Systems
+## 🏛️ Seven Flagship Production Systems
 
-1. **Cash Desk (CashDeskApp)** — Enterprise Windows Desktop Bursary, POS & Campus Commerce Accounting Suite (.NET / C# / SQL Server).
-2. **Grubbex Backend API** — Multi-Sided On-Demand Food & Grocery Logistics Marketplace (Node.js / Express / Socket.io / Google Maps / Zod).
-3. **BYHELB LMS Backend v2** — Distributed Government Higher Education Loan Processing Engine (Node.js / Express / MongoDB / 8-Tier RBAC / Concurrency Locks).
-4. **BYSHELB Student Loan Portal Frontend** — Citizen-Facing Tertiary Loan Application Platform (React 18 / MobX / 7-Stage Wizard).
-5. **SecureSync Cloud Storage Platform** — Encrypted Cloud Document Management & Collaboration Platform (React 18 / Redux Toolkit / RTK Query / 2FA).
+1. 🏢 **Cash Desk (CashDeskApp)** — Enterprise Windows Desktop Bursary, POS & Campus Commerce Accounting Suite (.NET / C# / SQL Server / 90+ Stored Procs).
+2. 🏥 **ChucksMedicareApp** — Enterprise Hospital Information System (HIMS), Ward/Bed Management & 3-Tier Pharmacy (.NET / C# / SQL Server).
+3. 📦 **MM Traders Inventory ERP** — Wholesale Supply Chain ERP, Cheque Registers & Google Drive Cloud Backup (.NET / C# / Python / SQL Server).
+4. 🚚 **Grubbex Backend API** — Multi-Sided On-Demand Logistics Marketplace (Node.js / Express / Socket.io / Google Maps / Zod).
+5. 🏛️ **BYHELB LMS Backend v2** — Distributed Government Higher Education Loan Processing Engine (Node.js / Express / MongoDB / 8-Tier RBAC / Concurrency Locks).
+6. 🎓 **BYSHELB Student Loan Portal Frontend** — Citizen-Facing Tertiary Loan Application Platform (React 18 / MobX / 7-Stage Wizard).
+7. ☁️ **SecureSync Cloud Storage Platform** — Encrypted Cloud Document Management & Collaboration Platform (React 18 / Redux Toolkit / RTK Query / 2FA).
 
 ---
 
