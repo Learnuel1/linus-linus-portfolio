@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Linus Linus — Senior Full-Stack, Systems & Desktop Software Architect</title>
-  <meta name="description" content="Portfolio of Linus Linus: Senior Full-Stack & Systems Software Architect specializing in C#/.NET Windows enterprise suites, real-time Node.js/Socket.io logistics backends, React 18, and FinTech ledgers." />
+  <meta name="description" content="Portfolio of Linus Linus: Senior Full-Stack & Systems Software Architect specializing in C#/.NET Windows enterprise suites, healthcare HIMS, real-time Node.js/Socket.io logistics backends, React 18, and FinTech ledgers." />
   <meta name="author" content="Linus Linus" />
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Linus Linus — Senior Full-Stack & Systems Architect" />
-  <meta property="og:description" content="Engineering enterprise desktop accounting suites, resilient FinTech backends, and high-throughput real-time platforms." />
+  <meta property="og:description" content="Engineering enterprise desktop suites, healthcare HIMS, resilient FinTech backends, and high-throughput real-time platforms." />
   <meta property="og:image" content="./linus_linus-photo.jpg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -43,12 +43,13 @@
               cyan: '#06b6d4',
               violet: '#8b5cf6',
               amber: '#f59e0b',
+              rose: '#f43f5e',
             },
             surface: {
-              dark: '#080c14',
-              card: '#0f172a',
+              dark: '#070a12',
+              card: '#0d1322',
               cardLight: '#ffffff',
-              border: '#1e293b',
+              border: '#1c263d',
               borderLight: '#e2e8f0',
             }
           },
@@ -70,45 +71,59 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #080c14;
+      background: #070a12;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1e293b;
+      background: #1c263d;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
       background: #38bdf8;
     }
     .glass-nav {
-      background: rgba(8, 12, 20, 0.85);
+      background: rgba(7, 10, 18, 0.85);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
     .light .glass-nav {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(16px);
     }
-    .glow-cyan {
-      box-shadow: 0 0 50px -10px rgba(56, 189, 248, 0.25);
+    /* Cybernetic Blueprint Grid */
+    .blueprint-bg {
+      background-size: 32px 32px;
+      background-image: 
+        radial-gradient(circle, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
     }
-    .glow-emerald {
-      box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.25);
+    .light .blueprint-bg {
+      background-image: 
+        radial-gradient(circle, rgba(14, 165, 233, 0.12) 1px, transparent 1px);
     }
     .code-chip {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.82rem;
     }
     @keyframes pulseGlow {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 0.8; }
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.75; transform: scale(1.04); }
     }
     .pulse-glow {
-      animation: pulseGlow 4s ease-in-out infinite;
+      animation: pulseGlow 5s ease-in-out infinite;
+    }
+    /* Code block styling */
+    pre code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+    /* Command palette kbd */
+    kbd {
+      box-shadow: 0 1px 0 1px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 
-<body class="bg-[#080c14] text-slate-100 font-sans transition-colors duration-300 dark:bg-[#080c14] dark:text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
+<body class="bg-[#070a12] text-slate-100 font-sans transition-colors duration-300 dark:bg-[#070a12] dark:text-slate-100 antialiased selection:bg-brand-500 selection:text-white blueprint-bg">
 
   <!-- ==================== NAVIGATION BAR ==================== -->
   <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-800/80 transition-all duration-300">
@@ -125,23 +140,37 @@
               Linus Linus
               <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             </span>
-            <span class="text-xs text-slate-400 block font-mono">Systems & Full-Stack Architect</span>
+            <span class="text-xs text-slate-400 block font-mono">Systems & Software Architect</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
           <a href="#about" class="hover:text-brand-400 transition-colors">About</a>
           <a href="#skills" class="hover:text-brand-400 transition-colors">Skills</a>
-          <a href="#projects" class="hover:text-brand-400 transition-colors">Flagship Systems</a>
-          <a href="#architecture" class="hover:text-brand-400 transition-colors">Architecture Playground</a>
+          <a href="#projects" class="hover:text-brand-400 transition-colors">7 Flagship Systems</a>
+          <a href="#architecture" class="hover:text-brand-400 transition-colors">Playground</a>
           <a href="#contact" class="hover:text-brand-400 transition-colors">Contact</a>
         </nav>
 
-        <!-- Right Side Actions -->
-        <div class="flex items-center gap-3">
+        <!-- Right Side Actions & Command Palette Trigger -->
+        <div class="flex items-center gap-2.5">
+          
+          <!-- Command Palette Trigger Button (Ctrl + K) -->
+          <button id="cmdPaletteBtn" aria-label="Open Command Palette" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-800 bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white transition-all text-xs font-mono group" title="Press Ctrl + K">
+            <i data-lucide="command" class="w-3.5 h-3.5 text-brand-400 group-hover:scale-110 transition-transform"></i>
+            <span class="hidden md:inline text-slate-400">Quick Actions</span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700 text-[10px] text-brand-300 font-bold">⌘K</span>
+          </button>
+
+          <!-- WhatsApp Direct Link -->
+          <a href="https://wa.me/2348120484386?text=Hello%20Linus,%20I%20viewed%20your%20software%20architect%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/60 transition-all">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span>WhatsApp</span>
+          </a>
+
           <!-- Theme Toggle Button -->
-          <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2.5 rounded-xl border border-slate-700/80 hover:bg-slate-800 text-slate-300 hover:text-white transition-all">
+          <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2.5 rounded-xl border border-slate-800 bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white transition-all">
             <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
             <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
           </button>
@@ -153,7 +182,7 @@
           </a>
 
           <!-- Mobile Hamburger -->
-          <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="md:hidden p-2.5 rounded-xl border border-slate-700 hover:bg-slate-800 text-slate-300">
+          <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="lg:hidden p-2.5 rounded-xl border border-slate-700 hover:bg-slate-800 text-slate-300">
             <i data-lucide="menu" class="w-5 h-5"></i>
           </button>
         </div>
@@ -161,17 +190,24 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-[#0a0f1d] px-6 py-5 space-y-4">
-      <a href="#about" class="block text-slate-300 hover:text-brand-400 font-medium mobile-link">About</a>
-      <a href="#skills" class="block text-slate-300 hover:text-brand-400 font-medium mobile-link">Skills Matrix</a>
-      <a href="#projects" class="block text-slate-300 hover:text-brand-400 font-medium mobile-link">Flagship Systems</a>
-      <a href="#architecture" class="block text-slate-300 hover:text-brand-400 font-medium mobile-link">Architecture Playground</a>
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-800 bg-[#0a0f1d] px-6 py-5 space-y-4">
+      <button onclick="openCommandPalette()" class="w-full flex items-center justify-between px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">
+        <span class="flex items-center gap-2"><i data-lucide="search" class="w-4 h-4 text-brand-400"></i> Search commands & systems...</span>
+        <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] text-brand-300">⌘K</span>
+      </button>
+      <a href="#about" class="block text-slate-300 hover:text-brand-400 font-medium mobile-link">About & Philosophy</a>
+      <a href="#skills" class="block text-slate-300 hover:text-brand-400 font-medium mobile-link">Skills Matrix (35+ Tools)</a>
+      <a href="#projects" class="block text-slate-300 hover:text-brand-400 font-medium mobile-link">7 Flagship Systems</a>
+      <a href="#architecture" class="block text-slate-300 hover:text-brand-400 font-medium mobile-link">Architecture Simulator</a>
       <a href="#contact" class="block text-slate-300 hover:text-brand-400 font-medium mobile-link">Contact & Direct Channels</a>
       <div class="pt-2 border-t border-slate-800 flex flex-col gap-2">
-        <a href="./LINUS_LINUS_CV.pdf" download="Linus_Linus_CV.pdf" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold bg-brand-500 text-slate-950">
+        <a href="https://wa.me/2348120484386?text=Hello%20Linus,%20I%20reviewed%20your%20software%20architect%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold bg-emerald-500 text-slate-950">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Chat on WhatsApp
+        </a>
+        <a href="./LINUS_LINUS_CV.pdf" download="Linus_Linus_CV.pdf" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-brand-500 text-slate-950">
           <i data-lucide="download" class="w-4 h-4"></i> Download CV (PDF)
         </a>
-        <a href="https://docs.google.com/document/d/1uOnFfa2ZRpZ_U-90RfCxj0ReTtMGGUOoNQq_LFtVNmc/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-medium border border-slate-700 text-slate-300">
+        <a href="https://docs.google.com/document/d/1uOnFfa2ZRpZ_U-90RfCxj0ReTtMGGUOoNQq_LFtVNmc/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-xs font-medium border border-slate-700 text-slate-300">
           <i data-lucide="file-text" class="w-4 h-4"></i> View on Google Docs
         </a>
       </div>
@@ -183,23 +219,29 @@
     <!-- Background Ambient Glows -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-brand-500/10 rounded-full blur-[140px] pointer-events-none -z-10 pulse-glow"></div>
     <div class="absolute top-2/3 right-10 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="absolute top-1/2 left-10 w-[450px] h-[450px] bg-purple-500/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
 
     <!-- ==================== HERO SECTION ==================== -->
-    <section id="hero" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <section id="hero" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
         <!-- Left Content (7 Cols) -->
         <div class="lg:col-span-7 space-y-6">
           
-          <!-- Live Status Pill -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-300 text-xs font-mono tracking-wide">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>AVAILABLE FOR SENIOR FULL-STACK & SYSTEMS ROLES</span>
+          <!-- Live Status Pill & Press ⌘K Hint -->
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-300 text-xs font-mono tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>AVAILABLE FOR SENIOR FULL-STACK & SYSTEMS ROLES</span>
+            </div>
+            <button onclick="openCommandPalette()" class="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-mono text-slate-400 hover:text-brand-300 transition-colors">
+              <kbd class="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-700 text-slate-300 text-[10px]">Ctrl+K</kbd> to quick search
+            </button>
           </div>
 
           <!-- Main Hero Headline -->
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
-            Architecting <span class="bg-gradient-to-r from-brand-400 via-cyan-300 to-emerald-400 bg-clip-text text-transparent">Enterprise FinTech</span>, Desktop Suites & Real-Time Logistics.
+            Architecting <span class="bg-gradient-to-r from-brand-400 via-cyan-300 to-emerald-400 bg-clip-text text-transparent">Enterprise Systems</span>, Desktop Suites & Real-Time Logistics.
           </h1>
 
           <!-- Value Proposition -->
@@ -208,15 +250,10 @@
           </p>
 
           <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
+          <div class="flex flex-wrap items-center gap-3.5 pt-2">
             <a href="#projects" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold bg-brand-500 hover:bg-brand-400 text-slate-950 transition-all shadow-lg hover:shadow-brand-500/25">
               <span>Explore 7 Flagship Systems</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-
-            <a href="#architecture" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold border border-slate-700 hover:border-slate-500 hover:bg-slate-800/60 text-slate-200 transition-all">
-              <i data-lucide="cpu" class="w-4 h-4 text-cyan-400"></i>
-              <span>Architecture Playground</span>
             </a>
 
             <a href="https://wa.me/2348120484386?text=Hello%20Linus,%20I%20reviewed%20your%20software%20architect%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all shadow-lg hover:shadow-emerald-500/25">
@@ -224,8 +261,8 @@
               <span>WhatsApp Linus</span>
             </a>
 
-            <a href="./LINUS_LINUS_CV.pdf" download="Linus_Linus_CV.pdf" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold border border-emerald-500/40 hover:bg-emerald-950/30 text-emerald-300 transition-all">
-              <i data-lucide="file-down" class="w-4 h-4"></i>
+            <a href="./LINUS_LINUS_CV.pdf" download="Linus_Linus_CV.pdf" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold border border-slate-700 hover:border-slate-500 hover:bg-slate-800/60 text-slate-200 transition-all">
+              <i data-lucide="file-down" class="w-4 h-4 text-brand-400"></i>
               <span>Download CV</span>
             </a>
           </div>
@@ -305,19 +342,59 @@
 
       </div>
 
+      <!-- ==================== DEVELOPER INTERACTIVE TERMINAL ==================== -->
+      <div class="mt-12 rounded-2xl bg-[#090d18] border border-slate-800/90 shadow-2xl overflow-hidden max-w-4xl mx-auto">
+        <!-- Terminal Header -->
+        <div class="px-5 py-3 bg-slate-950 border-b border-slate-800/80 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+            <span class="text-xs font-mono text-slate-400 ml-2">bash — linus@systems-architect:~</span>
+          </div>
+          <!-- Quick Clickable CLI Chips -->
+          <div class="hidden sm:flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
+            <span>Quick:</span>
+            <button onclick="runCliCmd('linus --systems')" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 hover:text-brand-300">--systems</button>
+            <button onclick="runCliCmd('linus --skills')" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 hover:text-brand-300">--skills</button>
+            <button onclick="runCliCmd('linus --contact')" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 hover:text-brand-300">--contact</button>
+            <button onclick="runCliCmd('clear')" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 hover:text-rose-300">clear</button>
+          </div>
+        </div>
+
+        <!-- Terminal Body -->
+        <div class="p-5 font-mono text-xs sm:text-sm text-slate-300 min-h-[160px] max-h-[260px] overflow-y-auto space-y-2" id="terminalOutput">
+          <div class="text-slate-500">// Welcome to Linus Linus Interactive CLI. Type <span class="text-brand-300 font-bold">help</span> or click preset flags above.</div>
+          <div class="text-emerald-400"><span class="text-cyan-400">linus@architect:~$</span> npx linus --overview</div>
+          <div class="text-slate-300 pl-4 border-l-2 border-brand-500/40 space-y-1">
+            <div>🚀 <strong class="text-white">Linus Linus</strong> — Senior Full-Stack, Systems & Desktop Architect</div>
+            <div>⚡ 7 Production Systems: Cash Desk, ChucksMedicare (HIMS), MM Traders ERP, Grubbex, BYHELB, SecureSync</div>
+            <div>🛠️ Stack: C# / .NET 4.5, Node.js, Express, Socket.io, React 18, SQL Server (90+ SPs), MongoDB, Python</div>
+            <div>📞 Direct: +234 812 048 4386 | WhatsApp: https://wa.me/2348120484386</div>
+          </div>
+        </div>
+
+        <!-- Terminal Input Line -->
+        <div class="px-5 py-2.5 bg-slate-950/70 border-t border-slate-800 flex items-center gap-2 font-mono text-xs sm:text-sm">
+          <span class="text-cyan-400 font-bold">linus@architect:~$</span>
+          <input type="text" id="terminalInput" placeholder="Try 'help', 'linus --systems', 'linus --skills', or 'contact'..." class="w-full bg-transparent text-white focus:outline-none placeholder-slate-600 font-mono" />
+          <button onclick="submitTerminalInput()" class="text-xs text-brand-400 hover:text-brand-300 font-bold px-2 py-1">Enter</button>
+        </div>
+      </div>
+
       <!-- Marquee Technology Strip -->
-      <div class="mt-20 pt-8 border-t border-slate-800/80">
+      <div class="mt-16 pt-8 border-t border-slate-800/80">
         <p class="text-center text-xs font-mono uppercase tracking-widest text-slate-500 mb-6">Core Engineering Ecosystem & Protocols</p>
         <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-brand-300 flex items-center gap-1.5"><i data-lucide="layers" class="w-3.5 h-3.5"></i> C# / .NET 4.5</span>
           <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-cyan-300 flex items-center gap-1.5"><i data-lucide="database" class="w-3.5 h-3.5"></i> Microsoft SQL Server</span>
           <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-emerald-300 flex items-center gap-1.5"><i data-lucide="server" class="w-3.5 h-3.5"></i> Node.js v20 & Express</span>
           <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-amber-300 flex items-center gap-1.5"><i data-lucide="radio" class="w-3.5 h-3.5"></i> Socket.io Real-Time</span>
-          <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-blue-300 flex items-center gap-1.5"><i data-lucide="activity" class="w-3.5 h-3.5"></i> Healthcare HIMS</span>
+          <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-rose-300 flex items-center gap-1.5"><i data-lucide="activity" class="w-3.5 h-3.5"></i> Healthcare HIMS</span>
           <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-indigo-300 flex items-center gap-1.5"><i data-lucide="cloud" class="w-3.5 h-3.5"></i> PythonDrive Sync</span>
           <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-purple-300 flex items-center gap-1.5"><i data-lucide="shield" class="w-3.5 h-3.5"></i> Zod & WMI Anti-Tamper</span>
           <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-teal-300 flex items-center gap-1.5"><i data-lucide="map" class="w-3.5 h-3.5"></i> Google Maps Platform</span>
-          <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-rose-300 flex items-center gap-1.5"><i data-lucide="credit-card" class="w-3.5 h-3.5"></i> Double-Entry FinTech</span>
+          <span class="code-chip px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-emerald-300 flex items-center gap-1.5"><i data-lucide="credit-card" class="w-3.5 h-3.5"></i> Double-Entry FinTech</span>
         </div>
       </div>
     </section>
@@ -333,20 +410,20 @@
             <span>Engineering Philosophy</span>
           </div>
           <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Bridging Enterprise Desktop Accounting & Distributed Cloud Systems.
+            Bridging Enterprise Desktop Systems & Distributed Cloud Platforms.
           </h2>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          <!-- Card 1: Deterministic State & Ledgers -->
+          <!-- Card 1: Deterministic State & Concurrency -->
           <div class="p-8 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
             <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400">
               <i data-lucide="git-merge" class="w-6 h-6"></i>
             </div>
             <h3 class="text-xl font-bold text-white">Deterministic State Machines</h3>
             <p class="text-slate-300 text-sm leading-relaxed">
-              Eliminating non-deterministic race conditions across multi-tier governance workflows. Whether managing 8-tier civil service loan sign-offs or multi-party courier handovers, states advance strictly through verified, auditable transitions.
+              Eliminating non-deterministic race conditions across multi-tier governance workflows. Whether managing 8-tier civil service loan sign-offs, in-patient hospital admissions, or multi-party courier handovers, states advance strictly through verified, auditable transitions.
             </p>
             <div class="pt-2 text-xs font-mono text-slate-400 flex items-center gap-2">
               <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
@@ -361,7 +438,7 @@
             </div>
             <h3 class="text-xl font-bold text-white">Double-Entry Financial Rigor</h3>
             <p class="text-slate-300 text-sm leading-relaxed">
-              Money cannot vanish or duplicate in transit. Built cashless student pocket money wallets in C# with automated session roll-overs, and platform courier escrow models deducting exact commissions upon verified customer PIN/QR delivery handovers.
+              Money cannot vanish or duplicate in transit. Built cashless student pocket money wallets in C# with automated session roll-overs, wholesale ERP cheque registers, and platform courier escrow models deducting exact commissions upon verified customer PIN/QR delivery handovers.
             </p>
             <div class="pt-2 text-xs font-mono text-slate-400 flex items-center gap-2">
               <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
@@ -421,24 +498,35 @@
     </section>
 
 
-    <!-- ==================== 5 FLAGSHIP SYSTEMS ==================== -->
+    <!-- ==================== 7 FLAGSHIP SYSTEMS WITH FILTER TABS ==================== -->
     <section id="projects" class="py-24 bg-slate-950/70 border-t border-slate-800/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="max-w-3xl mb-16">
-          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 mb-2">
-            <i data-lucide="folder-git-2" class="w-4 h-4"></i>
-            <span>Production Systems Portfolio</span>
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 mb-2">
+              <i data-lucide="folder-git-2" class="w-4 h-4"></i>
+              <span>Production Systems Portfolio</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              Seven Verified Enterprise Case Studies.
+            </h2>
+            <p class="text-slate-300 text-sm mt-2">
+              Filter by engineering domain to inspect detailed architectures, operational state machines, and real-world impact.
+            </p>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Seven Verified Enterprise Engineering Case Studies.
-          </h2>
-          <p class="text-slate-300 text-base mt-2">
-            Detailed architectures, operational state machines, and real-world impact across healthcare HIMS, wholesale ERP supply chains, institutional finance, on-demand logistics, government loan boards, and cloud storage.
-          </p>
+
+          <!-- Project Filter Category Tabs -->
+          <div class="mt-6 md:mt-0 flex flex-wrap gap-2" id="projectFilterTabs">
+            <button class="proj-tab active px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-brand-500 text-slate-950 transition-all" data-pfilter="all">All Systems (7)</button>
+            <button class="proj-tab px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-pfilter="desktop">Enterprise Desktop (.NET/C#)</button>
+            <button class="proj-tab px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-pfilter="backend">Backend & Real-Time (Node/Socket)</button>
+            <button class="proj-tab px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-pfilter="web">Web Clients (React 18)</button>
+          </div>
         </div>
 
-        <div class="space-y-12" id="projectsContainer">
+        <!-- Projects Cards Container -->
+        <div class="space-y-10" id="projectsContainer">
           <!-- Injected dynamically via app.js -->
         </div>
 
@@ -512,32 +600,7 @@
             <!-- Direct Contact List -->
             <div class="space-y-4 pt-4 border-t border-slate-800">
               
-              <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                <div class="flex items-center gap-3">
-                  <div class="p-2 rounded-lg bg-brand-500/10 text-brand-400"><i data-lucide="mail" class="w-4 h-4"></i></div>
-                  <div>
-                    <span class="text-xs text-slate-400 block font-mono">Primary Email</span>
-                    <a href="mailto:linus.linus204@gmail.com" class="text-sm font-medium text-white hover:text-brand-400">linus.linus204@gmail.com</a>
-                  </div>
-                </div>
-                <button onclick="copyToClipboard('linus.linus204@gmail.com', this)" class="p-2 text-slate-400 hover:text-white" title="Copy Email">
-                  <i data-lucide="copy" class="w-4 h-4"></i>
-                </button>
-              </div>
-
-              <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                <div class="flex items-center gap-3">
-                  <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400"><i data-lucide="mail" class="w-4 h-4"></i></div>
-                  <div>
-                    <span class="text-xs text-slate-400 block font-mono">Secondary Email</span>
-                    <a href="mailto:linus.zoea@gmail.com" class="text-sm font-medium text-white hover:text-emerald-400">linus.zoea@gmail.com</a>
-                  </div>
-                </div>
-                <button onclick="copyToClipboard('linus.zoea@gmail.com', this)" class="p-2 text-slate-400 hover:text-white" title="Copy Email">
-                  <i data-lucide="copy" class="w-4 h-4"></i>
-                </button>
-              </div>
-
+              <!-- Direct WhatsApp Chat Card -->
               <a href="https://wa.me/2348120484386?text=Hello%20Linus,%20I%20viewed%20your%20software%20architect%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/50 hover:bg-emerald-900/40 transition-all group shadow-lg">
                 <div class="flex items-center gap-3">
                   <div class="p-2 rounded-lg bg-emerald-500 text-slate-950">
@@ -567,6 +630,32 @@
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="flex items-center gap-3">
+                  <div class="p-2 rounded-lg bg-brand-500/10 text-brand-400"><i data-lucide="mail" class="w-4 h-4"></i></div>
+                  <div>
+                    <span class="text-xs text-slate-400 block font-mono">Primary Email</span>
+                    <a href="mailto:linus.linus204@gmail.com" class="text-sm font-medium text-white hover:text-brand-400">linus.linus204@gmail.com</a>
+                  </div>
+                </div>
+                <button onclick="copyToClipboard('linus.linus204@gmail.com', this)" class="p-2 text-slate-400 hover:text-white" title="Copy Email">
+                  <i data-lucide="copy" class="w-4 h-4"></i>
+                </button>
+              </div>
+
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="flex items-center gap-3">
+                  <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400"><i data-lucide="mail" class="w-4 h-4"></i></div>
+                  <div>
+                    <span class="text-xs text-slate-400 block font-mono">Secondary Email</span>
+                    <a href="mailto:linus.zoea@gmail.com" class="text-sm font-medium text-white hover:text-emerald-400">linus.zoea@gmail.com</a>
+                  </div>
+                </div>
+                <button onclick="copyToClipboard('linus.zoea@gmail.com', this)" class="p-2 text-slate-400 hover:text-white" title="Copy Email">
+                  <i data-lucide="copy" class="w-4 h-4"></i>
+                </button>
               </div>
 
               <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900 border border-slate-800">
@@ -607,7 +696,8 @@
                 <label class="block text-xs font-mono text-slate-300 mb-1.5">Subject / Engagement Type</label>
                 <select id="contactSubject" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-brand-500 focus:outline-none text-sm text-white transition-all">
                   <option value="Senior Engineering Role">Senior Full-Stack / Systems Role</option>
-                  <option value="FinTech / Desktop Consultation">FinTech / Desktop Architecture Consultation</option>
+                  <option value="Healthcare HIMS / Desktop Consultation">Healthcare HIMS / Desktop Consultation</option>
+                  <option value="FinTech / Cloud Consultation">FinTech / Real-Time Architecture Consultation</option>
                   <option value="Contract Development">Contract Development Project</option>
                   <option value="General Technical Inquiry">General Technical Inquiry</option>
                 </select>
@@ -660,12 +750,35 @@
     </div>
   </footer>
 
-  <!-- ==================== PROJECT ARCHITECTURE MODAL ==================== -->
+  <!-- ==================== COMMAND PALETTE (CMD+K / CTRL+K) ==================== -->
+  <div id="cmdPalette" class="fixed inset-0 z-50 hidden items-start justify-center bg-black/80 backdrop-blur-md pt-20 px-4">
+    <div class="relative w-full max-w-2xl rounded-2xl bg-slate-900 border border-slate-700 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+      
+      <!-- Search Input -->
+      <div class="flex items-center gap-3 px-5 py-4 border-b border-slate-800 bg-slate-950/60">
+        <i data-lucide="search" class="w-5 h-5 text-brand-400"></i>
+        <input type="text" id="cmdInput" placeholder="Type a command or search systems (e.g. 'Cash Desk', 'CV', 'WhatsApp', 'Skills')..." class="w-full bg-transparent text-sm text-white focus:outline-none placeholder-slate-500 font-sans" />
+        <kbd class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[10px] text-slate-400 font-mono">ESC</kbd>
+      </div>
+
+      <!-- Action Items List -->
+      <div class="max-h-[60vh] overflow-y-auto p-3 space-y-1" id="cmdResults">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="px-5 py-2.5 bg-slate-950 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400">
+        <span class="flex items-center gap-1.5"><kbd class="px-1 bg-slate-800 rounded border border-slate-700 text-[10px]">↑</kbd> <kbd class="px-1 bg-slate-800 rounded border border-slate-700 text-[10px]">↓</kbd> to navigate</span>
+        <span class="flex items-center gap-1.5"><kbd class="px-1.5 bg-slate-800 rounded border border-slate-700 text-[10px]">↵ Enter</kbd> to select</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PROJECT ARCHITECTURE & CODE MODAL ==================== -->
   <div id="projectModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4 overflow-y-auto">
     <div class="relative w-full max-w-4xl rounded-3xl bg-slate-900 border border-slate-700/80 shadow-2xl overflow-hidden my-8">
       
       <!-- Modal Header -->
-      <div class="px-8 py-6 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
+      <div class="px-8 py-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
         <div>
           <span class="text-xs font-mono text-brand-400 uppercase tracking-widest block" id="modalTag">System Architecture</span>
           <h3 class="text-2xl font-bold text-white" id="modalTitle">Project Title</h3>
@@ -675,8 +788,20 @@
         </button>
       </div>
 
+      <!-- Modal Tab Controls (Architecture Flow vs Code Snippet) -->
+      <div class="px-8 pt-4 border-b border-slate-800/80 flex gap-4 bg-slate-950/40">
+        <button id="modalTabArch" class="pb-3 text-xs font-mono font-semibold border-b-2 border-brand-400 text-white flex items-center gap-2">
+          <i data-lucide="layers" class="w-4 h-4 text-brand-400"></i>
+          <span>Architecture Flow & Specifications</span>
+        </button>
+        <button id="modalTabCode" class="pb-3 text-xs font-mono font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2">
+          <i data-lucide="code-2" class="w-4 h-4 text-cyan-400"></i>
+          <span>Verified Code Implementation</span>
+        </button>
+      </div>
+
       <!-- Modal Body -->
-      <div class="p-8 space-y-6 max-h-[75vh] overflow-y-auto" id="modalContent">
+      <div class="p-8 space-y-6 max-h-[70vh] overflow-y-auto" id="modalContent">
         <!-- Injected via JavaScript -->
       </div>
 
