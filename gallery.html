@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI & Screenshots Gallery — Linus Linus | Senior Software Architect</title>
+  <meta name="description" content="Visual interface showcase and production screenshots across Linus Linus's 7 enterprise systems: Desktop financial suites, hospital HIMS, logistics radars, loan wizards, and cloud vaults." />
+  <meta name="author" content="Linus Linus" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Systems Interface Gallery — Linus Linus" />
+  <meta property="og:description" content="Visual UI interfaces, dashboard mockups, and production screenshots across 7 enterprise systems." />
+  <meta property="og:image" content="./linus_linus-photo.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49',
+            },
+            accent: {
+              emerald: '#10b981',
+              cyan: '#06b6d4',
+              violet: '#8b5cf6',
+              amber: '#f59e0b',
+              rose: '#f43f5e',
+            },
+            surface: {
+              dark: '#070a12',
+              card: '#0d1322',
+              cardLight: '#ffffff',
+              border: '#1c263d',
+              borderLight: '#e2e8f0',
+            }
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070a12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1c263d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #38bdf8;
+    }
+    .glass-nav {
+      background: rgba(7, 10, 18, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .light .glass-nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+    }
+    .blueprint-bg {
+      background-size: 32px 32px;
+      background-image: 
+        radial-gradient(circle, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+    }
+    .light .blueprint-bg {
+      background-image: 
+        radial-gradient(circle, rgba(14, 165, 233, 0.12) 1px, transparent 1px);
+    }
+    .code-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+    }
+  </style>
+</head>
+
+<body class="bg-[#070a12] text-slate-100 font-sans transition-colors duration-300 dark:bg-[#070a12] dark:text-slate-100 antialiased selection:bg-brand-500 selection:text-white blueprint-bg">
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Left: Back to Main Portfolio & Brand -->
+        <div class="flex items-center gap-4">
+          <a href="./index.html" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-800 bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white transition-all text-xs font-mono group">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-brand-400 group-hover:-translate-x-0.5 transition-transform"></i>
+            <span>Back to Portfolio</span>
+          </a>
+
+          <div class="hidden sm:block h-5 w-px bg-slate-800"></div>
+
+          <div class="hidden sm:flex items-center gap-2.5">
+            <div class="relative w-9 h-9 rounded-lg overflow-hidden ring-1 ring-brand-500/50 shadow-md">
+              <img src="./linus_linus-photo.jpg" alt="Linus Linus" class="w-full h-full object-cover object-top" />
+            </div>
+            <div>
+              <span class="text-sm font-bold text-white block">Linus Linus</span>
+              <span class="text-[10px] text-slate-400 font-mono">UI & Systems Gallery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Direct Actions -->
+        <div class="flex items-center gap-3">
+          
+          <!-- Direct WhatsApp Chat -->
+          <a href="https://wa.me/2348120484386?text=Hello%20Linus,%20I%20am%20viewing%20your%20UI%20Screenshots%20Gallery%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/60 transition-all">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span>WhatsApp</span>
+          </a>
+
+          <!-- Theme Toggle -->
+          <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2.5 rounded-xl border border-slate-800 bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white transition-all">
+            <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+            <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+          </button>
+
+          <!-- Download CV Button -->
+          <a href="./LINUS_LINUS_CV.pdf" download="Linus_Linus_CV.pdf" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-brand-500 hover:bg-brand-400 text-slate-950 transition-all shadow-md">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Resume</span> (PDF)
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="relative pt-28 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ==================== HERO INTRO ==================== -->
+    <div class="mb-12 space-y-4">
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/40 text-cyan-300 text-xs font-mono tracking-wide">
+        <i data-lucide="image" class="w-3.5 h-3.5 text-cyan-400"></i>
+        <span>VISUAL INTERFACE SHOWCASE • 21 MAPPED PRODUCTION VIEWS</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        Enterprise User Interfaces & <span class="bg-gradient-to-r from-brand-400 via-cyan-300 to-emerald-400 bg-clip-text text-transparent">System Dashboards</span>
+      </h1>
+
+      <p class="text-base text-slate-300 max-w-3xl leading-relaxed">
+        Visual inspection of user interfaces across Windows desktop applications, hospital clinical charting, real-time rider tracking radars, multi-stage citizen loan portals, and encrypted cloud workspaces.
+      </p>
+
+      <!-- Asset Replacement Information Card -->
+      <div class="p-4 rounded-2xl bg-slate-900/90 border border-brand-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-6">
+        <div class="flex items-start gap-3">
+          <div class="p-2 rounded-lg bg-brand-500/10 text-brand-400 shrink-0 mt-0.5 sm:mt-0">
+            <i data-lucide="info" class="w-4 h-4"></i>
+          </div>
+          <div class="text-xs text-slate-300 space-y-0.5">
+            <span class="font-bold text-white block">Image Placeholder System Active</span>
+            <span>All 21 screenshot slots are pre-configured with interactive vector blueprints. When you drop your physical screenshots into <code class="text-brand-300 font-mono">assets/screenshots/&lt;project&gt;/</code>, they will automatically display!</span>
+          </div>
+        </div>
+        <a href="#upload-guide" class="shrink-0 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-brand-300 hover:text-white text-xs font-mono transition-all">
+          View Directory Mapping ↓
+        </a>
+      </div>
+    </div>
+
+    <!-- ==================== SYSTEM FILTER TABS ==================== -->
+    <div class="mb-10 overflow-x-auto pb-2">
+      <div class="inline-flex gap-2 min-w-max" id="galleryFilterTabs">
+        <button class="gal-tab active px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-brand-500 text-slate-950 transition-all" data-gfilter="all">All Systems (21 Views)</button>
+        <button class="gal-tab px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-gfilter="cashdesk">Cash Desk (Bursary POS)</button>
+        <button class="gal-tab px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-gfilter="chucksmedicare">ChucksMedicare (HIMS)</button>
+        <button class="gal-tab px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-gfilter="mmtraders">MM Traders ERP</button>
+        <button class="gal-tab px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-gfilter="grubbex">Grubbex Logistics</button>
+        <button class="gal-tab px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-gfilter="byhelb-admin">BYHELB LMS (Admin)</button>
+        <button class="gal-tab px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-gfilter="byshelb-portal">BYSHELB Portal (Citizen)</button>
+        <button class="gal-tab px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all" data-gfilter="securesync">SecureSync Cloud</button>
+      </div>
+    </div>
+
+    <!-- ==================== GALLERY GRID ==================== -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="galleryContainer">
+      <!-- Injected dynamically via gallery.js -->
+    </div>
+
+    <!-- ==================== ASSET MAPPING CHEAT SHEET ==================== -->
+    <section id="upload-guide" class="mt-24 p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="p-2 rounded-xl bg-cyan-500/10 text-cyan-400">
+          <i data-lucide="folder-tree" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-white">Screenshot Directory File Mapping</h2>
+          <p class="text-xs text-slate-400 font-mono">Drop image files directly into these directories to populate the gallery.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 text-xs font-mono">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+          <span class="font-bold text-brand-300">assets/screenshots/cashdesk/</span>
+          <div class="text-slate-400">• 01-dashboard.png</div>
+          <div class="text-slate-400">• 02-debtor-reconciliation.png</div>
+          <div class="text-slate-400">• 03-pos-counter.png</div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+          <span class="font-bold text-rose-300">assets/screenshots/chucksmedicare/</span>
+          <div class="text-slate-400">• 01-clinical-admission.png</div>
+          <div class="text-slate-400">• 02-pharmacy-dispensary.png</div>
+          <div class="text-slate-400">• 03-diagnostic-lab.png</div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+          <span class="font-bold text-indigo-300">assets/screenshots/mmtraders/</span>
+          <div class="text-slate-400">• 01-erp-dashboard.png</div>
+          <div class="text-slate-400">• 02-cheque-register.png</div>
+          <div class="text-slate-400">• 03-pythondrive-sync.png</div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+          <span class="font-bold text-emerald-300">assets/screenshots/grubbex/</span>
+          <div class="text-slate-400">• 01-geo-dispatch.png</div>
+          <div class="text-slate-400">• 02-qr-handover.png</div>
+          <div class="text-slate-400">• 03-rider-wallet.png</div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+          <span class="font-bold text-cyan-300">assets/screenshots/byhelb-admin/</span>
+          <div class="text-slate-400">• 01-loan-memos.png</div>
+          <div class="text-slate-400">• 02-concurrency-locks.png</div>
+          <div class="text-slate-400">• 03-disbursement-table.png</div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+          <span class="font-bold text-blue-300">assets/screenshots/byshelb-portal/</span>
+          <div class="text-slate-400">• 01-onboarding-gates.png</div>
+          <div class="text-slate-400">• 02-application-wizard.png</div>
+          <div class="text-slate-400">• 03-flutterwave-settlement.png</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== LIGHTBOX DIALOG ==================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-4 overflow-y-auto">
+    <div class="relative w-full max-w-5xl rounded-3xl bg-slate-900 border border-slate-700/80 shadow-2xl overflow-hidden my-4">
+      
+      <!-- Lightbox Header -->
+      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-950">
+        <div>
+          <span class="text-[10px] font-mono text-brand-400 uppercase tracking-widest block" id="lightboxSystem">System</span>
+          <h3 class="text-lg sm:text-xl font-bold text-white truncate max-w-lg" id="lightboxTitle">Screenshot Title</h3>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono text-slate-400 px-2 py-1 rounded bg-slate-800" id="lightboxCounter">1 / 21</span>
+          <button id="closeLightboxBtn" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Lightbox Image Stage -->
+      <div class="p-4 sm:p-6 bg-slate-950/80 flex items-center justify-center relative min-h-[350px]">
+        
+        <!-- Prev & Next Arrow Controls -->
+        <button id="prevLightboxBtn" class="absolute left-4 z-10 p-3 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-white shadow-xl hover:scale-105 transition-all">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+
+        <button id="nextLightboxBtn" class="absolute right-4 z-10 p-3 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-white shadow-xl hover:scale-105 transition-all">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+
+        <div id="lightboxDisplay" class="w-full flex items-center justify-center">
+          <!-- Dynamic high-res image or vector mockup -->
+        </div>
+
+      </div>
+
+      <!-- Lightbox Footer Meta -->
+      <div class="p-6 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <p class="text-xs text-slate-300 max-w-2xl leading-relaxed" id="lightboxDesc">Description</p>
+        
+        <div class="shrink-0 flex items-center gap-2">
+          <button onclick="copyCurrentLightboxPath()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-mono text-brand-300 hover:text-white transition-all">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <span>Copy Asset Path</span>
+          </button>
+          <span class="text-[10px] font-mono text-slate-500 hidden sm:inline" id="lightboxPathText"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick Message Button -->
+  <a href="https://wa.me/2348120484386?text=Hello%20Linus,%20I%20viewed%20your%20UI%20Gallery%20and%20would%20like%20to%20connect." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat on WhatsApp with Linus" 
+     class="fixed bottom-6 left-6 z-40 group flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs font-mono shadow-2xl hover:scale-105 transition-all duration-300 ring-2 ring-emerald-400/50 hover:ring-emerald-300">
+    <span class="relative flex h-3 w-3">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-slate-950"></span>
+    </span>
+    <i data-lucide="message-circle" class="w-4 h-4"></i>
+    <span class="tracking-wide">WhatsApp Me</span>
+  </a>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none px-4 py-3 rounded-xl bg-emerald-500 text-slate-950 font-semibold text-sm shadow-xl flex items-center gap-2">
+    <i data-lucide="check-circle" class="w-5 h-5"></i>
+    <span id="toastMessage">Copied path to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-[#06080e] py-12 text-center text-sm text-slate-400 mt-12">
+    <div class="max-w-7xl mx-auto px-4 space-y-3">
+      <div class="flex items-center justify-center gap-3 text-white font-bold text-base">
+        <a href="./index.html" class="hover:text-brand-400 transition-colors">Linus Linus</a>
+        <span class="text-slate-600">•</span>
+        <span class="text-brand-400 font-mono text-xs font-normal">UI & Production Systems Gallery</span>
+      </div>
+      <p class="text-xs text-slate-500">
+        &copy; <span id="currentYear">2026</span> Linus Linus. All Rights Reserved. Hosted via GitHub Pages.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./gallery.js"></script>
+</body>
+</html>

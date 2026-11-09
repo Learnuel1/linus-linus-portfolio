@@ -4,22 +4,20 @@
 // ==================== 1. VERIFIED SKILLS INVENTORY ====================
 const skillsData = [
   // Desktop & Systems (.NET)
-  { name: 'C# (5.0 / 6.0)', category: 'desktop', level: 'Expert', icon: 'file-code-2', desc: 'Object-oriented systems programming, async Task patterns' },
-  { name: '.NET Framework 4.5/4.5.2', category: 'desktop', level: 'Architect', icon: 'layers', desc: 'Windows Forms, ADO.NET, Service & Factory layers' },
+  { name: 'C#', category: 'desktop', level: 'Expert', icon: 'file-code-2', desc: 'Object-oriented systems programming, async Task patterns' },
+  { name: '.NET Framework', category: 'desktop', level: 'Architect', icon: 'layers', desc: 'Windows Forms, ADO.NET, Service & Factory layers' },
   { name: 'ADO.NET & SqlHelper', category: 'desktop', level: 'Advanced', icon: 'database', desc: 'Direct parameterization, SqlDataAdapter, ACID transactions' },
   { name: 'Multi-Threading (Async)', category: 'desktop', level: 'Architect', icon: 'cpu', desc: 'GroundWorker non-blocking reconciliation, Task.Run()' },
   { name: 'WMI Hardware Security', category: 'desktop', level: 'Advanced', icon: 'shield-alert', desc: 'Win32_Processor & BIOS hashing to SHA-256 for machine licenses' },
   { name: 'SAP Crystal Reports 13', category: 'desktop', level: 'Advanced', icon: 'file-text', desc: '15+ enterprise audit reports, thermal POS slip generation' },
   { name: 'Zen Barcode Engine', category: 'desktop', level: 'Advanced', icon: 'scan', desc: 'Code128 1D & QR Code 2D generation & parsing' },
-  { name: 'ExcelDataReader', category: 'desktop', level: 'Advanced', icon: 'table', desc: 'High-throughput binary .xlsx/.xls parsing & roster cleaning' },
   { name: 'Healthcare HIMS & Wards', category: 'desktop', level: 'Architect', icon: 'activity', desc: 'In-patient admissions, room/bed allocations & patient charting' },
   { name: '3-Tier Pharmacy Hierarchy', category: 'desktop', level: 'Architect', icon: 'package', desc: 'Store to dispensary to pharmacy shelf inventory movement' },
 
   // Backend & Real-Time
-  { name: 'Node.js (v18 / v20)', category: 'backend', level: 'Expert', icon: 'server', desc: 'High-throughput microservices, non-blocking I/O runtime' },
-  { name: 'Express.js 4.x', category: 'backend', level: 'Architect', icon: 'network', desc: 'Dual-route gateways, middleware pipelines, error handling' },
-  { name: 'Socket.io WebSockets', category: 'backend', level: 'Advanced', icon: 'radio', desc: 'Real-time GPS location broadcasting & live delivery events' },
-  { name: 'Zod Runtime Validation', category: 'backend', level: 'Advanced', icon: 'check-square', desc: 'Centralized schema validation, type safety, route isolation' },
+  { name: 'Node.js', category: 'backend', level: 'Expert', icon: 'server', desc: 'High-throughput microservices, non-blocking I/O runtime' },
+  { name: 'Express.js', category: 'backend', level: 'Architect', icon: 'network', desc: 'Dual-route gateways, middleware pipelines, error handling' },
+  
   { name: 'EventEmitter Architecture', category: 'backend', level: 'Advanced', icon: 'activity', desc: 'Decoupled domain event notifications, transactional emailers' },
   { name: 'RESTful APIs & Swagger', category: 'backend', level: 'Architect', icon: 'file-code', desc: 'OpenAPI 2.0 specs, YAML definitions, Postman documentation' },
   { name: 'Dual-Route Gateways', category: 'backend', level: 'Advanced', icon: 'split', desc: 'Enforced Web (/api/v1) vs Mobile (/api/v1/m) client separation' },
@@ -36,13 +34,11 @@ const skillsData = [
   { name: 'Multi-Tier KYC Engine', category: 'database', level: 'Advanced', icon: 'badge-check', desc: 'Virtual NIN, Voter Card, Driver License, CAC corporate, TIN' },
 
   // Frontend & Cloud
-  { name: 'React 18 & Vite', category: 'frontend', level: 'Expert', icon: 'layout', desc: 'Modern hooks, functional components, fast bundle compilation' },
+  { name: 'React & Vite', category: 'frontend', level: 'Expert', icon: 'layout', desc: 'Modern hooks, functional components, fast bundle compilation' },
   { name: 'Next.js App Router', category: 'frontend', level: 'Advanced', icon: 'globe', desc: 'Server/client components, SEO metadata, API routes' },
   { name: 'Redux Toolkit & RTK Query', category: 'frontend', level: 'Expert', icon: 'repeat', desc: 'Normalized state, automated 401 token refresh & rotation' },
   { name: 'MobX State Management', category: 'frontend', level: 'Advanced', icon: 'zap', desc: 'Observable stores, wizard progress providers, draft resume' },
-  { name: 'PythonDrive (PyODBC)', category: 'frontend', level: 'Advanced', icon: 'cloud-rain', desc: 'Python automation syncing SQL Server backups to Google Drive' },
   { name: 'Tailwind CSS & PostCSS', category: 'frontend', level: 'Expert', icon: 'palette', desc: 'Utility-first modern design, dark/light theme switching' },
-  { name: '@cyntler Doc Viewer', category: 'frontend', level: 'Advanced', icon: 'eye', desc: 'In-app native rendering for PDF, Word, Excel, PowerPoint' },
   { name: 'Google Maps Platform', category: 'frontend', level: 'Advanced', icon: 'map-pin', desc: 'Geocoding, Distance Matrix API, Haversine geo-fencing' },
   { name: 'AWS Secrets & S3', category: 'frontend', level: 'Advanced', icon: 'cloud', desc: 'Cloud credentials management, asset storage pipelines' },
   { name: 'Two-Factor Auth (2FA)', category: 'frontend', level: 'Advanced', icon: 'key', desc: 'Timed OTP challenges, challenge verification, fallback recovery' }
@@ -1230,6 +1226,7 @@ function runCliCmd(cmd) {
       <div class="text-white font-bold">Available Linus CLI Commands:</div>
       <div><span class="text-brand-300 font-mono">linus --overview</span> : Summary bio, architectural philosophy & focus</div>
       <div><span class="text-brand-300 font-mono">linus --systems</span>  : Catalog of all 7 verified enterprise production systems</div>
+      <div><span class="text-brand-300 font-mono">linus --gallery</span>  : Open UI & Production Screenshots Gallery (21 Views)</div>
       <div><span class="text-brand-300 font-mono">linus --skills</span>   : Complete technology and protocol breakdown</div>
       <div><span class="text-brand-300 font-mono">linus --contact</span>  : Direct channels (Phone, WhatsApp, Email, LinkedIn)</div>
       <div><span class="text-brand-300 font-mono">linus --cv</span>       : Direct download of Linus Linus CV (PDF)</div>
@@ -1282,6 +1279,9 @@ function runCliCmd(cmd) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  } else if (normalized === 'linus --gallery' || normalized === 'gallery' || normalized === 'ui' || normalized === 'screenshots') {
+    response.innerHTML = `<div class="text-emerald-400">> Opening UI & Production Screenshots Gallery...</div>`;
+    window.location.href = './gallery.html';
   } else if (normalized === 'whatsapp') {
     response.innerHTML = `<div class="text-emerald-400">> Opening WhatsApp chat (+234 812 048 4386)...</div>`;
     window.open('https://wa.me/2348120484386?text=Hello%20Linus,%20I%20viewed%20your%20software%20architect%20portfolio%20and%20would%20like%20to%20connect.', '_blank');
@@ -1298,6 +1298,7 @@ function runCliCmd(cmd) {
 // ==================== 10. COMMAND PALETTE (CTRL+K / CMD+K) ====================
 const commandPaletteItems = [
   // Actions & Jumps
+  { id: 'jump-gallery', title: 'UI & Production Screenshots Gallery (21 Views)', subtitle: 'Visual interface showcase, dashboard mockups, and screenshots', icon: 'image', type: 'link', url: './gallery.html' },
   { id: 'jump-projects', title: '7 Flagship Enterprise Systems', subtitle: 'Explore case studies, metrics, and architecture diagrams', icon: 'folder-git-2', type: 'section', target: '#projects' },
   { id: 'jump-skills', title: 'Skills & Protocol Matrix', subtitle: 'Browse 35+ verified technologies and proficiency ratings', icon: 'cpu', type: 'section', target: '#skills' },
   { id: 'jump-arch', title: 'Interactive System Simulator', subtitle: 'Run GroundWorker, hospital workflow, and loan state machines', icon: 'activity', type: 'section', target: '#architecture' },
