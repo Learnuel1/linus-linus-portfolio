@@ -2,7 +2,7 @@
 **Senior Full-Stack, Systems & Desktop Software Architect**
 
 📍 West Africa (WAT) | Open to Worldwide Remote  
-📞 [+234 812 048 4386](tel:+2348120484386) | [+234 811 366 4697](tel:+2348113664697)  
+📞 [+234 812 048 4386](tel:+2348120484386) | [+234 811 366 4697](tel:+2348113664697) | 💬 [WhatsApp Message](https://wa.me/2348120484386)  
 ✉️ [linus.linus204@gmail.com](mailto:linus.linus204@gmail.com) | [linus.zoea@gmail.com](mailto:linus.zoea@gmail.com)  
 🌐 [GitHub: @Learnuel1](https://www.github.com/Learnuel1) | [LinkedIn: linus-linus-i](https://www.linkedin.com/in/linus-linus-i)
 

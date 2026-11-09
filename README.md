@@ -8,6 +8,7 @@
 > **LinkedIn:** [linus-linus-i](https://www.linkedin.com/in/linus-linus-i)  
 > **Emails:** [linus.linus204@gmail.com](mailto:linus.linus204@gmail.com) | [linus.zoea@gmail.com](mailto:linus.zoea@gmail.com)  
 > **Direct Lines:** [+234 812 048 4386](tel:+2348120484386) | [+234 811 366 4697](tel:+2348113664697)  
+> **WhatsApp:** [Chat on WhatsApp (+234 812 048 4386)](https://wa.me/2348120484386)  
 > **Location:** West Africa (WAT) | Open to Worldwide Remote
 
 ---

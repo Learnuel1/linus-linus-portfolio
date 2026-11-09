@@ -7,6 +7,7 @@
 
 <p align="center">
   <a href="https://Learnuel1.github.io/linus-linus-portfolio/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-Learnuel1.github.io-0284c7?style=for-the-badge" alt="Portfolio" /></a>
+  <a href="https://wa.me/2348120484386"><img src="https://img.shields.io/badge/WhatsApp-Chat_Directly-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp" /></a>
   <a href="https://www.linkedin.com/in/linus-linus-i"><img src="https://img.shields.io/badge/LinkedIn-linus--linus--i-0077b5?style=for-the-badge&logo=linkedin" alt="LinkedIn" /></a>
   <a href="mailto:linus.linus204@gmail.com"><img src="https://img.shields.io/badge/Email-linus.linus204%40gmail.com-ea4335?style=for-the-badge&logo=gmail" alt="Email" /></a>
 </p>
@@ -56,5 +57,6 @@ Frontend & UI:    React 18 • Vite • Next.js • Redux Toolkit • RTK Query 
 - 📥 **[Download Curriculum Vitae (PDF)](https://raw.githubusercontent.com/Learnuel1/linus-linus-portfolio/main/LINUS_LINUS_CV.pdf)**
 - 📝 **[Open in Google Docs](https://docs.google.com/document/d/1uOnFfa2ZRpZ_U-90RfCxj0ReTtMGGUOoNQq_LFtVNmc/edit?usp=drivesdk)**
 - 📞 Phone: `+234 812 048 4386` | `+234 811 366 4697`
+- 💬 WhatsApp: [Chat Directly on WhatsApp](https://wa.me/2348120484386)
 - ✉️ Email: `linus.linus204@gmail.com` | `linus.zoea@gmail.com`
 - 📍 West Africa (WAT) | Open for Worldwide Remote Roles
