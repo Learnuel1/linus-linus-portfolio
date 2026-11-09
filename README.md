@@ -4,6 +4,7 @@
 ![Linus Linus](./linus_linus-photo.jpg)
 
 > **Live Portfolio:** [https://Learnuel1.github.io/linus-linus-portfolio/](https://Learnuel1.github.io/linus-linus-portfolio/)  
+> **UI Screenshots Gallery:** [https://Learnuel1.github.io/linus-linus-portfolio/gallery.html](https://Learnuel1.github.io/linus-linus-portfolio/gallery.html)  
 > **GitHub Profile:** [@Learnuel1](https://www.github.com/Learnuel1)  
 > **LinkedIn:** [linus-linus-i](https://www.linkedin.com/in/linus-linus-i)  
 > **Emails:** [linus.linus204@gmail.com](mailto:linus.linus204@gmail.com) | [linus.zoea@gmail.com](mailto:linus.zoea@gmail.com)  
@@ -50,6 +51,21 @@ This repository hosts the official interactive developer profile portfolio of **
 5. 🏛️ **BYHELB LMS Backend v2** — Distributed Government Higher Education Loan Processing Engine (Node.js / Express / MongoDB / 8-Tier RBAC / Concurrency Locks).
 6. 🎓 **BYSHELB Student Loan Portal Frontend** — Citizen-Facing Tertiary Loan Application Platform (React 18 / MobX / 7-Stage Wizard).
 7. ☁️ **SecureSync Cloud Storage Platform** — Encrypted Cloud Document Management & Collaboration Platform (React 18 / Redux Toolkit / RTK Query / 2FA).
+
+---
+
+## 🖼️ UI & Production Screenshots Showcase
+
+A dedicated showcase page is available at [`gallery.html`](./gallery.html) featuring 21 mapped production interfaces:
+- **Cash Desk:** Bursary revenue dashboard, GroundWorker async debt reconciliation matrix, campus cashless POS terminal.
+- **ChucksMedicareApp (HIMS):** In-patient ward/bed allocation board, 3-tier pharmaceutical supply chain, clinical pathology diagnostic suite.
+- **MM Traders ERP:** Multi-brand wholesale inventory ledger, commercial cheque clearance register, PythonDrive Google Drive sync.
+- **Grubbex:** Haversine real-time courier radar, dynamic QR code delivery handover & escrow, rider double-entry wallet.
+- **BYHELB LMS (Admin):** 8-tier RBAC batch memo approval pipeline, active reviewer concurrency view locks, bulk NIP bank transfers.
+- **BYSHELB Portal (Citizen):** 3-tier onboarding prerequisite gatekeeper, 7-stage loan application wizard, Flutterwave fee checkout.
+- **SecureSync:** Encrypted file vault explorer, native in-app multi-format doc viewer (@cyntler), two-factor authentication (2FA).
+
+> **Drop-in Asset Support:** Custom screenshot PNG/JPG files can be placed in `assets/screenshots/<project-id>/` to automatically replace vector blueprints. See [`assets/screenshots/README.md`](./assets/screenshots/README.md) for full mapping.
 
 ---
 
